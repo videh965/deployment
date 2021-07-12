@@ -1,6 +1,8 @@
 import numpy as np
 from flask import Flask,render_template,request
-import keras
+import tensorflow
+from tensorflow import keras
+from keras import models
 from keras.models import load_model
 from keras.preprocessing import image
 import os
@@ -10,13 +12,8 @@ from skimage.transform import resize
 from skimage.io import imsave
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-import numpy as np
-import os
 import cv2 
 import random
-import tensorflow
-import keras
-from keras import models
 from keras import layers
 from keras.models import Sequential
 from keras.layers import Dense
