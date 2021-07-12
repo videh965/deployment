@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/g.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  
+    <title>Document</title>
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+    <form action = "{{ url_for('upload')}}" method = "POST" enctype = "multipart/form-data">
+        <h2 class="h2 text-primary">Please Upload an image!!</h2>
+        <br>
+        <input type = "file" class="form-label form-control form-control-lg" name = "image" /> 
+    <button class="btn btn-primary mt-5 btn-lg"> Predict</button>
+    </form>
+    <br>
+    {% if img_loc %}
+    <!-- <img src="{{img_loc}}" alt="" width="150" height="150" class="img-fluid">
+    <br>
+    Our predection is: {{output}} -->
+    <div class="d-flex justify-content-center">
+            <img src="{{orig_image}}" alt="" srcset="" style="width:500px;height:500px ;">
+            <img src="{{img_loc}}" class="card-img-top im" style="width:500px;height:500px" alt="...">
+      </div>
+    <p> Grain Boundary detected in less than 10 s </p>  
+    {% endif %} 
+</div>
+</head>
+<body>
+    
+</body>
+</html>
