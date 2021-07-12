@@ -1,6 +1,6 @@
 import numpy as np
 from flask import Flask,render_template,request
-from tensorflow import keras
+import keras
 from keras.models import load_model
 from keras.preprocessing import image
 import os
@@ -15,7 +15,7 @@ import os
 import cv2 
 import random
 import tensorflow
-from tensorflow import keras
+import keras
 from keras import models
 from keras import layers
 from keras.models import Sequential
